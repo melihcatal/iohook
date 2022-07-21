@@ -14,8 +14,7 @@ prebuilds
 examples/**/.DS_Store
 npm-debug.log*
 stacktrace*
-binding.gyp
-uiohook.gyp
+
 
 libuiohook/nbproject/
 libuiohook/build/

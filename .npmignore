@@ -1,13 +1,11 @@
 .idea/
 .vscode/
 .scratch/
-build/
-builds/
+
 docs/.vuepress/dist/
 logs/
 node_modules/
 prebuilds/
-libuiohook/
 .github/
 CMakeFiles/
 docs/
@@ -19,8 +17,7 @@ test/
 *.log
 npm-debug.log*
 stacktrace*
-/binding.gyp
-/uiohook.gyp
+
 .lintignore
 .eslintrc.json
 .prettierrc.json

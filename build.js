@@ -94,8 +94,8 @@ function initBuild() {
       // If no upload has been specified, don't attempt to upload
       return;
     }
-
-    return uploadFiles(files);
+    return;
+    //return uploadFiles(files);
   });
 
   cpGyp();

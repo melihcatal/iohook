@@ -10,12 +10,9 @@ const pkg = require('./package.json');
 const nodeAbi = require('node-abi');
 const { optionsFromPackage } = require('./helpers');
 
-/*
 let arch = process.env.ARCH
   ? process.env.ARCH.replace('i686', 'ia32').replace('x86_64', 'x64')
   : process.arch;
-  */
-let arch = 'x64';
 
 let gypJsPath = path.join(
   __dirname,

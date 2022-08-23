@@ -10,9 +10,12 @@ const pkg = require('./package.json');
 const nodeAbi = require('node-abi');
 const { optionsFromPackage } = require('./helpers');
 
+/*
 let arch = process.env.ARCH
   ? process.env.ARCH.replace('i686', 'ia32').replace('x86_64', 'x64')
   : process.arch;
+  */
+let arch = 'x64';
 
 let gypJsPath = path.join(
   __dirname,
@@ -43,7 +46,9 @@ function initBuild() {
     }
     options.targets = options.targets.map((targetStr) => targetStr.split('-'));
     if (process.env.npm_config_targets === 'all') {
-      options.targets = supportedTargets.map((arr) => [arr[0], arr[2]]);
+      options.targets = require('./package.json').supportedTargets.map(
+        (arr) => [arr[0], arr[2]]
+      );
       options.platforms = ['win32', 'darwin', 'linux'];
       options.arches = ['x64', 'ia32'];
     }
